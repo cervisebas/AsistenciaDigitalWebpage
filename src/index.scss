@@ -1,0 +1,14 @@
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  #root {
+    flex: 1;
+    display: flex;
+  }
+}
