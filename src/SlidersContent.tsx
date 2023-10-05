@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { RingLoader } from "react-spinners";
 
-const _Sliders = lazy(()=>delayForDemo(import('./Sliders'), 500));
+const _Sliders = lazy(()=>delay(import('./Sliders'), 500));
 export default React.memo(function SlidersComponent(_props: {}) {
     return(<>
         <Suspense fallback={<Loading />}>
@@ -16,7 +16,7 @@ const Loading = React.memo(function() {
     </div>);
 });
 
-function delayForDemo(promise: any, time: number) {
+function delay(promise: any, time: number) {
     return new Promise((resolve)=>setTimeout(resolve, time))
         .then(()=>(promise));
 }
