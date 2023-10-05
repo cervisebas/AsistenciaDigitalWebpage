@@ -9,6 +9,7 @@ html {
     display: flex;
     width: 100vw;
     height: 100vh;
+    max-height: 100svh;
     #root {
       flex: 1;
       display: flex;
