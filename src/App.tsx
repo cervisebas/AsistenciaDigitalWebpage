@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Icon from './assets/icon.webp';
 import './App.scss';
 import Button from './components/Button';
@@ -14,6 +14,13 @@ export default React.memo(function App() {
     root?.classList.add('enter');
     setMount(true);
   }
+
+  useEffect(()=>{
+    document.addEventListener(
+      'contextmenu',
+      (e)=>e.preventDefault()
+    );
+  }, []);
 
   return(<div id={'principal-content'}>
     <div className={'title'}>

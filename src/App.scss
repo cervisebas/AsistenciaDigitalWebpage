@@ -30,7 +30,7 @@
             height: auto;
             /*width: calc(173.83px * var(--scale-icon));
             height: calc(116.97px * var(--scale-icon));*/
-            transition: transform var(--animation-duration) ease;
+            transition: width var(--animation-duration) ease;
             user-select: none;
             -webkit-user-drag: none;
         }
@@ -57,7 +57,7 @@
             margin: 12px;
             .icon {
                 width: calc(138.4px * 0.6);
-                min-width: unset;
+                min-width: calc(138.4px * 0.6);
             }
             .button-start {
                 display: none;
