@@ -20,6 +20,7 @@
     }*/
     transition: box-shadow 200ms;
     opacity: 0.9;
+    cursor: pointer;
     .ButtonLeft, .ButtonRight {
         height: 34px;
         width: 34px;
@@ -42,4 +43,7 @@
 }
 .CustomButton:active {
     box-shadow: -1px 1px 4px 0px rgba(0,0,0,0.2);
+}
+.CustomButton:hover {
+    background-color: #f79040;
 }

@@ -31,6 +31,8 @@
             /*width: calc(173.83px * var(--scale-icon));
             height: calc(116.97px * var(--scale-icon));*/
             transition: transform var(--animation-duration) ease;
+            user-select: none;
+            -webkit-user-drag: none;
         }
         width: 100vw;
         display: flex;

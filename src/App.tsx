@@ -1,15 +1,18 @@
 /// <reference types="vite-plugin-svgr/client" />
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from './assets/icon.webp';
 import './App.scss';
 import Button from './components/Button';
 import { MdArrowForward } from "react-icons/md";
-import Sliders from './Sliders';
+import SlidersContent from './SlidersContent';
 
 export default React.memo(function App() {
+  const [mount, setMount] = useState(false);
+
   function _start() {
     const root = document.getElementById('root');
     root?.classList.add('enter');
+    setMount(true);
   }
 
   return(<div id={'principal-content'}>
@@ -23,6 +26,7 @@ export default React.memo(function App() {
         onPress={_start}
       />
     </div>
-    <Sliders />
+    {/*<Sliders />*/}
+    {(mount)&&<SlidersContent />}
   </div>);
 })
