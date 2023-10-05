@@ -1,0 +1,45 @@
+.CustomButton {
+    * {
+        user-select: none;
+    }
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 34px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #EC7C26;
+    /*padding-left: 12px;
+    padding-right: 12px;*/
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    /*.ButtonLeft {
+        margin-right: 4px;
+    }
+    .ButtonRight {
+        margin-left: 4px;
+    }*/
+    transition: box-shadow 200ms;
+    opacity: 0.9;
+    .ButtonLeft, .ButtonRight {
+        height: 34px;
+        width: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            fill: #FFFFFF;
+        }
+    }
+    .ButtonContent {
+        flex: 1;
+        display: flex;
+        height: 34px;
+        align-items: center;
+        span {
+            color: #FFFFFF;
+        }
+    }
+}
+.CustomButton:active {
+    box-shadow: -1px 1px 4px 0px rgba(0,0,0,0.2);
+}

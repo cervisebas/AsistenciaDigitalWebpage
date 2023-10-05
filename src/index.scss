@@ -13,6 +13,12 @@ html {
       flex: 1;
       display: flex;
       overflow: hidden;
+      background-color: #FFFFFF;
+      transition: background-color 500ms ease;
+      --animation-duration: 500ms;
+    }
+    #root.enter {
+      background-color: #EC7C26;
     }
   }
 }

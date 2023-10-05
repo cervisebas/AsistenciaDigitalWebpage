@@ -1,17 +1,25 @@
 #principal-content {
+    position: relative;
     flex: 1;
     display: flex;
     background-color: #FFFFFF;
     background: linear-gradient(0deg, rgba(236,124,38,1) 0%, rgba(255,255,255,0) 100%);
+    margin: 0;
     transition:
-        background-color 300ms ease;
+        background-color var(--animation-duration) ease,
+        background var(--animation-duration) ease,
+        border-radius var(--animation-duration) ease,
+        margin var(--animation-duration) ease;
     div.title {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        --scale-icon: 2.3;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 
+            left var(--animation-duration) ease,
+            top var(--animation-duration) ease,
+            margin var(--animation-duration) ease,
+            transform var(--animation-duration) ease;
         .icon {
             width: 70%;
             max-width: 400px;
@@ -21,16 +29,36 @@
             height: auto;
             /*width: calc(173.83px * var(--scale-icon));
             height: calc(116.97px * var(--scale-icon));*/
+            transition: transform var(--animation-duration) ease;
         }
-        .title {
-            margin-top: 8px;
-            width: 70%;
-            max-width: 400px;
-            min-width: 138.4px;
-            height: auto;
-        }
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
     }
 }
-#principal-content.enter {
-    background-color: #EC7C26;    
+#root.enter {
+    #principal-content {
+        //background-color: #EC7C26;
+        margin: 20px;
+        background:#FFFFFF;
+        border-radius: 20px;
+        .title {
+            left: 0px;
+            top: 0px;
+            //transform: translate(-20%, -20%);
+            transform: translate(0%, 0%);
+            width: min-content;
+            margin: 12px;
+            .icon {
+                width: calc(138.4px * 0.6);
+                min-width: unset;
+            }
+            .button-start {
+                display: none;
+            }
+        }
+    }
 }
