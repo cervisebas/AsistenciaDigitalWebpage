@@ -4,6 +4,7 @@ import Icon from './assets/icon.webp';
 import './App.scss';
 import Button from './components/Button';
 import { MdArrowForward } from "react-icons/md";
+import Sliders from './Sliders';
 
 export default React.memo(function App() {
   function _start() {
@@ -22,5 +23,6 @@ export default React.memo(function App() {
         onPress={_start}
       />
     </div>
+    <Sliders />
   </div>);
 })
